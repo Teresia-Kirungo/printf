@@ -1,6 +1,6 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * _printf - function my printf
@@ -20,6 +20,5 @@ int _printf(const char *format, ...)
 
 	length = _print_format(format, args);
 	va_end(args);
-	
 	return (length);
 }
