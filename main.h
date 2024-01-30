@@ -9,8 +9,8 @@
   */
 typedef struct specifiers
 {
-	char *specifier;
-	int (*f)(va_list args);
+    char *specifier;
+    int (*f)(va_list args);
 } spc_dt;
 
 int _printf(const char *format, ...);
