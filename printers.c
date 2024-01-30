@@ -54,15 +54,13 @@ int _print_a_string(va_list args)
 int _print_a_integer(va_list args)
 {
 	int count = 1, m = 0;
-	unsigned int n = 0;
-
-	n = va_arg(args, int);
+	int n = va_arg(args, int);
+	
 	m = n;
 	if (m < 0)
 	{
 		_write('-');
-		m = m * -1;
-		n = m;
+		m = -m;
 		count += 1;
 	}
 	while (n > 9)
