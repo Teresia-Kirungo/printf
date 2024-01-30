@@ -1,6 +1,6 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include "main.h"
 
 /**
  * _printf - function my printf
@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 	int length = 0;
 
 	if (format == NULL)
-		return (-1);
+		return (0);
 
 	va_start(args, format);
 
