@@ -14,6 +14,8 @@ int _print_a_char(va_list args)
 	return (1);
 }
 
+int _print_bin(va_list args);
+
 /**
   * _print_a_string - Prints a string
   * @args: A list of variadic arguments
