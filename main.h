@@ -1,19 +1,29 @@
-#ifndef PRINTF_H
-#define PRINTF_H
+#ifndef MAIN_H
+#define MAIN_H
+#include <stdarg.h>
+
+/**
+  * struct specifiers - Struct specifiers
+  * @specifier: The conversion specifier
+  * @f: The function pointer
+  */
+typedef struct specifiers
+{
+	char *specifier;
+	int (*f)(va_list args);
+} spc_dt;
 
 int _printf(const char *format, ...);
-int _putchar(char c);
-int print_str(char *c);
-int print_Str(char *c);
-int print_int(int num);
-int print_dec(int num);
-int print_rot13(char *c);
-int print_rev(char *c);
-int print_bin(unsigned int num);
-int print_hex(unsigned int num);
-int print_Hex(unsigned int num);
-int print_oct(unsigned int num);
-int print_ptr(int num);
-int print_uns(unsigned int num);
+int _write(char c);
+int _print_a_char(va_list args);
+int _print_a_string(va_list args);
+int _print_format(const char *format, va_list args);
+int _print_spec(char format, va_list args);
+int _print_invalid_spec(char prev_format, char format, int count);
+int _print_a_integer(va_list args);
+void _recursion_integer(int a);
+int _print_int_binary(va_list args);
+void _recursion_int_binary(int a);
+int _validate_char(char _type);
 
-#endif
+#endif /* _HOLBERTON */
