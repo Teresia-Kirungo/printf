@@ -31,6 +31,22 @@ int _print_int_binary(va_list args)
 	return (b);
 }
 
+int _print_bin(va_list args)
+{
+    unsigned int x = va_arg(args, unsigned int);
+    int b = 0;
+
+    while (x > 0)
+    {
+        x = x / 2;
+        b++;
+    }
+
+    _recursion_int_binary(va_arg(args, unsigned int));
+    return (b);
+}
+
+
 /**
   * _recursion_int_binary - Prints a binary
   * @a: integer to print
