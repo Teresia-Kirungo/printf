@@ -1,11 +1,11 @@
-#include "holberton.h"
+#include "main.h"
 #include <stdlib.h>
 
 void _print(unsigned int n, ...);
 
 int main(void)
 {
-	_print(3, NULL, ", ", "Holberton");
+	_print(3, NULL, ", ", "ALX");
 	return (0);
 }
 
